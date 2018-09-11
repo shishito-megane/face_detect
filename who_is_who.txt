@@ -1,0 +1,4 @@
+kame,0
+kazu,1
+naka,2
+su-,3
