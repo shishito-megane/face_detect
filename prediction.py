@@ -22,7 +22,7 @@ def camera():
     cascade_path = './cascade_file.xml'
     cascade = cv2.CascadeClassifier(cascade_path)
     cap = cv2.VideoCapture(0)
-    while (True):      
+    while True:
         ret, img = cap.read()     
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=2,)
@@ -46,18 +46,18 @@ def kiritori():
 
     cascade_path = './cascade_file.xml'
     cascade = cv2.CascadeClassifier(cascade_path)
-    #cascade_path = '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml'
-    #cascade_path = '/usr/local/share/OpenCV/haarcascades/lbpcascade_animeface.xml'
+    # cascade_path = '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml'
+    # cascade_path = '/usr/local/share/OpenCV/haarcascades/lbpcascade_animeface.xml'
 
     # argvs = sys.argv   # コマンドライン引数を格納したリストの取得
     # argc = len(argvs)  # 引数の個数
 
-    #directory = argv
+    # directory = argv
     # まず元画像があるディレクトリを持ってくる
     image_path = "./src"
     # file_namesにディレクトリ込みのファイルネームを格納
     file_names = filenamelist(image_path)
-    #引数にとった出力先ディレクトリの存在確認 & 作成
+    # 引数にとった出力先ディレクトリの存在確認 & 作成
 
     output_path = "./output"
     # create_directory(output_path)
@@ -69,7 +69,6 @@ def kiritori():
     else :
         p = ProgressBar(len(file_names))
         print("File num = ",len(file_names))
-
 
     # 元画像のファイルの数だけ顔認識を続ける
     for file_name in file_names:
@@ -130,7 +129,7 @@ def identify():
     # 引数 testpath を実際に使用してるのはここ
     face_imgs = face_detection_from_path(args.testpath, img_rows)
 
-    #print(face_imgs)                                            # for debug
+    # print(face_imgs)                                            # for debug
 
     img_array = []
     for face_img in face_imgs:
@@ -145,7 +144,7 @@ def identify():
         for pre_i in np.arange(len(predR)):
             if predR[pre_i] == 1:
                 detect_name = ident[pre_i]
-                #print("he/she is {}".format(detect_name))      # for debug
+                # print("he/she is {}".format(detect_name))      # for debug
 
     return detect_name
 
