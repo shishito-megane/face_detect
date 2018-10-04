@@ -2,3 +2,9 @@ images/
 output/
 src/
 mymodel.h5
+
+# ---- python ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
