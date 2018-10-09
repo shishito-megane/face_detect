@@ -1,4 +1,4 @@
-name: flow-ubuntu
+name: face-detect
 channels:
   - menpo
   - conda-forge
@@ -168,5 +168,5 @@ dependencies:
   - zeromq=4.2.5=h439df22_0
   - zlib=1.2.11=ha838bed_2
   - opencv3=3.1.0=py36_0
-prefix: /home/kame/anaconda3/envs/flow-ubuntu
+prefix: /home/xxx/anaconda3/envs/face-detect
 
